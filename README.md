@@ -16,4 +16,5 @@ MQTT_TOPIC=homebox/labels
 MQTT_USERNAME=user
 MQTT_PASSWORD=pass
 COM_PORT=COM3
+OMIT_FIRST_PICTURE=true  # Optional: Skip the first picture received
 ```

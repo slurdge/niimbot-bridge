@@ -1,5 +1,5 @@
 // Printer Manager module
-import Readable from "node:stream";
+import { Readable } from "node:stream";
 import fs from "node:fs";
 import sharp from "sharp";
 import { ImageEncoder, printImage, initClient } from "@mmote/niimblue-node";
