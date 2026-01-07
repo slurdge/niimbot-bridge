@@ -1,4 +1,4 @@
-# Niimbot Bridge
+# Niimbot MQTT Bridge
 
 MQTT to Niimbot printer bridge.
 

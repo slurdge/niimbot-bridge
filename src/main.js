@@ -14,7 +14,7 @@ mqtt: {
 },
 printer: {
     comPort: process.env.COM_PORT,
-    outputFile: process.env.OUTPUT_FILE || "frame.png"
+    outputFile: process.env.OUTPUT_FILE || "label.png"
 },
 omitFirstPicture: process.env.OMIT_FIRST_PICTURE === 'true'
 };
