@@ -11,7 +11,8 @@ export class PrinterManager {
   /**
    * Create Printer Manager
    * @param {Object} config - Printer configuration
-   * @param {string} config.comPort - COM port for printer connection
+   * @param {string} config.transport - type of transport for printer connection
+   * @param {string} config.address - address for printer connection
    * @param {string} config.outputFile - Output file for received images
    */
   constructor(config) {
@@ -33,7 +34,7 @@ export class PrinterManager {
       logger.debug(`Image saved to: ${this.config.outputFile}`);
 
       // Initialize printer client
-      this.client = initClient("serial", this.config.comPort, false);
+      this.client = initClient(this.config.transport, this.config.address, false);
       await this.client.connect();
       logger.info("Connected to printer");
 

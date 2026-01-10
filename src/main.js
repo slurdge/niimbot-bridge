@@ -6,17 +6,18 @@ import { PrinterManager } from "./printerManager.js";
 
 const logger = createLogger("main");
 const config = {
-mqtt: {
+  mqtt: {
     broker: process.env.MQTT_BROKER,
     topic: process.env.MQTT_TOPIC,
     username: process.env.MQTT_USERNAME,
     password: process.env.MQTT_PASSWORD,
-},
-printer: {
-    comPort: process.env.COM_PORT,
-    outputFile: process.env.OUTPUT_FILE || "label.png"
-},
-omitFirstPicture: process.env.OMIT_FIRST_PICTURE === 'true'
+  },
+  printer: {
+    transport: process.env.PRINTER_TRANSPORT || "serial",
+    address: process.env.PRINTER_ADDRESS,
+    outputFile: process.env.OUTPUT_FILE || "label.png",
+  },
+  omitFirstPicture: process.env.OMIT_FIRST_PICTURE === "true",
 };
 
 async function main() {
